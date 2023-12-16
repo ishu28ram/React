@@ -1,0 +1,190 @@
+.previous-searches{
+    display: block;
+  
+    .category-search-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+        text-align: left;
+        margin-bottom:2.5rem;
+       .nav-link{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            .cat-icon {
+                    background-color: #000000;
+                    padding: 8px;
+                    border-radius: 50%;
+                    margin-bottom: 12px;
+            
+                }
+                .cat-icon:hover,
+                .cat-icon:focus{
+                    background-color: transparent;
+                    border: 3px solid black;
+                }
+            
+                h4 {
+                    color: var(--text-color);
+            text-align: center;
+                }
+            
+                svg {
+                    color: red;
+                    font-size: 2.5em;
+                    font-weight: bolder;
+                }
+        }
+       
+    
+
+    }
+         
+    .search-box{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 40px;
+        margin-bottom: 2.5rem;
+        input,.btn{
+            height: 100%;
+        }
+        input{
+            border:1px solid #4d4d4d;
+            min-width: 260px;
+            padding:0 0.5em;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+
+        }
+        .btn{
+            padding-block: 0;
+            padding-inline: 0.75em;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+
+//-----------random section------///
+.random-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, (minmax(250px, 1fr)));
+    gap: 1.5em;
+    overflow: hidden;
+    width: 100%;
+    h3{
+        font-size: 1.5em;
+        margin-bottom: 1.6em;
+    }
+    .recipe-card{
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0 5px 15px var(--shadow-color);
+        overflow: hidden;
+        width:260px;
+        height:240px;
+        
+        img{
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           border-radius: 10px;
+           position: absolute;
+           left:0;
+        }
+        img:hover{
+            transform: scale(1.1);
+        }
+       
+        p{
+            position: absolute;
+            z-index: 10;
+            left: 50%;
+            bottom: 0%;
+            transform: translate(-50%,0%);
+            color: rgb(255, 255, 255);
+            width: 100%;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        &::before {
+            content: "";
+            z-index: 3;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+        }
+    }
+   
+}
+
+
+// ingredients//
+
+.ingredient-container{
+    display: flex;
+    justify-content: space-around;
+    // align-items: center;
+    width:100%;
+    .box-1{
+        margin-right: 5rem;
+        width: 100%;
+        h2{
+            margin-bottom:2rem;
+            font-size: 2rem;
+            color:red
+        }
+        img{
+            width:350px;
+            height: 350px;
+            border: 4px solid black;
+
+        }
+    }
+    .box-2{
+        width: 100%;
+        p{
+            font-size: 1.6em;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+         .instruction-list {
+             font-size: 14px;
+             letter-spacing: 1px;
+             line-height: 1.5em;
+             min-width: 150px;
+         }
+    }
+
+}
+
+
+// popular picks//
+ h3 {
+     margin-top: 2rem;
+     margin-bottom: 2.5rem;
+     font-size: 2rem;
+     color: red
+ }
+.popular-picks-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, (minmax(250px, 1fr)));
+    gap: 1.5em;
+    overflow: hidden;
+    width: 100%;
+  
+}

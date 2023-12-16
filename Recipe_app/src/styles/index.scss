@@ -1,0 +1,205 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root{
+    --background-color: #fff;
+    --background-light:#fff;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --primary-color: rgb(255, 0, 86);
+    --text-color: #0A0A0A;
+    --text-light:#575757;
+    --font-size: 16px;
+    --animation-speed: 1;
+}
+[data-theme='dark']{
+    --background-color:rgba(29, 29, 29);
+    --background-light: rgba(77,77,77);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --text-color: #ffffff;
+    --text-light: #eceaea;
+
+}
+body{
+    font-size: var(--font-size);
+    font-family: 'roboto',sans-serif ;
+    padding-top: 55px;
+}
+@function getAnimationDUration($duration: number) {
+    @return calc($duration*var(--animation-speed))
+}
+
+;
+button{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+img{
+    object-fit: cover;
+}
+.main{
+    padding-block: 3vw;
+        svg {
+                width: 1.2em;
+                margin-right: 0.5em;
+            }
+}
+.container{
+    padding-inline: 20vw;
+}
+.section{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3vw;
+    flex-wrap:wrap;
+    .col{
+        width:50%;
+    }
+    .title{
+        color:var(--text-color);
+        font-size: 2.5em;
+        margin-bottom: 0.35em;
+        font-weight: 900;
+    }
+    .info{
+        color:var(--text-light);
+        font-size: 1em;
+        letter-spacing: 1.1px;
+        line-break: 1.3em;
+        line-height:1.4em;
+        margin-bottom: 1.25em;
+    }
+}
+.btn{
+    border:none;
+    font-weight: bold;
+    outline: none;
+    background-color: var(--primary-color);
+    color :#fff;
+    padding:0.75em 1em;
+    font-size: 1.1em;
+    letter-spacing:1px;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px var(--shadow-color);
+    &:hover{
+    box-shadow: 0 1px 3px var(--shadow-color);
+    }
+}
+
+
+
+
+@import 'partials/_navbar.scss';
+@import 'partials/animation.scss';
+@import 'partials/_sidebar.scss';
+@import 'partials/_home.scss';
+@import 'partials/_recipes.scss';
+
+@media screen and (max-width:1280px){
+    .container{
+        padding-inline: 18vw;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .container {
+        padding-inline: 12vw;
+    }
+}
+
+@media screen and (max-width:768px){
+    .container {
+            padding-inline: 6vw;
+        }
+    .navbar{
+        .nav-links{
+            display: none;
+        }
+        .sidebar-btn{
+            display: block;
+        }
+    }
+    .chief-card{
+        box-shadow: 0 5px 10px var(--shadow-color);
+    }
+    .section{
+        .col{
+            width:100%;
+            padding: 0 !important;
+            text-align: center;
+            margin-bottom: 2em;
+        }
+    }
+    .improve-skills .img{
+       order: 2;
+    }
+    .improve-skills .typography {
+       order: 1;
+    }
+    .improve-skills .btn{
+        display: block;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .skill-item{
+        display: inline-block;
+        margin:.8em
+    }
+    .footer{
+        grid-template-columns: repeat(4,1fr);
+        .footer-section:nth-child(1){
+            grid-column: span 4;
+        }           
+       .footer-section:nth-child(2),.footer-section:nth-child(3){
+            grid-column: span 2;
+       }
+    }
+        .random-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ingredient-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .box-1{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 3rem;
+                h1{
+                    text-align: center;
+                }
+                img{
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+            .box-2{
+                
+                .instruction-list{
+                    font-size: 18px;
+                }
+            }
+        }
+
+}
+@media screen and (max-width:480px) {
+    .container {
+        padding-inline: 3vw;
+    }
+    
+}
+
+
+
+
+
+
