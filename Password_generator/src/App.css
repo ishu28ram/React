@@ -1,0 +1,70 @@
+body{
+  background-color: rgb(136, 199, 255);
+
+}
+
+.app{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  margin-top:50px;
+}
+.main-container{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  width: 500px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(38, 38, 188);
+  padding:1rem 1.5rem;
+  color:white;
+  gap:15px;
+
+}
+.password-container{
+   display:flex;
+   justify-content: space-between;
+   width: 100%;
+}
+
+.char-length-container{
+   display:flex;
+   justify-content: space-between;
+   flex-direction: column;
+   width: 100%;
+   gap:15px;
+}
+.char-length{
+  display:flex;
+  justify-content: space-between;
+   width: 100%;
+}
+.checkboxes-container{
+ display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 10px; /* Gap between items */
+  width: 100%;
+}
+input,label{
+  cursor: pointer;
+}
+button{
+  background-color: yellow;
+  outline: none;
+  border:none;
+  padding:5px 8px;
+  font-weight: bolder;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: rgb(227, 227, 8);
+}
+.strong-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin:10px 0;
+}
