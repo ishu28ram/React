@@ -1,0 +1,118 @@
+h1 {
+  color: var(--text-header);
+}
+
+.about_container {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+
+  .about_section_one {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    h1 {
+      font-size: clamp(2rem, 4vw + 1rem, 4rem);
+    }
+    p {
+      font-size: 16px;
+      color: #7e7e7e;
+    }
+  }
+
+  .about_section_two {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+    .section_two_left {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex: 1;
+      h1 {
+        font-size: clamp(2rem, 2vw + 1rem, 4rem);
+      }
+      p {
+        font-size: clamp(18px, 2vw, 1.6rem);
+        color: #7e7e7e;
+        word-spacing: 8px;
+      }
+    }
+    .section_two_right {
+      flex: 1;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .about_section_three {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    h1 {
+      font-size: clamp(2rem, 4vw + 1rem, 4rem);
+    }
+    .user_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+
+      .user_box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 3px solid lightgray;
+          padding: 10px;
+        }
+        h5 {
+          font-size: 1.2rem;
+        }
+        p {
+          color: #7e7e7e;
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.about_section_four {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+    color: #7e7e7e;
+  }
+}
+
+@media (max-width: 668px) {
+  .about_container {
+    gap: 4rem;
+  }
+  .about_section_two {
+    flex-direction: column-reverse;
+    .section_two_left {
+      width: 100%;
+    }
+  }
+  .about_section_four {
+    width: 100%;
+  }
+}

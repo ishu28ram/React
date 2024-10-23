@@ -1,0 +1,45 @@
+.banner_container {
+  height: 80%;
+  margin-top: 10px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: var(--color-one);
+  .left {
+    flex: 1.5;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .quote_container {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-direction: column;
+      h3 {
+        font-size: 1.8rem;
+        letter-spacing: 3px;
+        line-height: 2.4rem;
+        color: black;
+      }
+      p {
+        font-style: italic;
+        align-self: flex-end;
+        color: rgb(134, 134, 134);
+      }
+    }
+  }
+  .right {
+    flex: 2;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+@media (max-width: 668px) {
+  .banner_container {
+    flex-direction: column-reverse;
+  }
+}

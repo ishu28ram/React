@@ -1,0 +1,30 @@
+.searchBar_container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  .inputField_container {
+    position: relative;
+    width: 100%;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: white;
+
+    border: 1px solid var(--link-text-color);
+    input {
+      width: 90%;
+      padding: 1.2rem;
+      border: none;
+      outline: none;
+      font-size: 18px;
+      color: black;
+    }
+    button {
+      font-size: 1.5rem;
+      position: absolute;
+      top: 35%;
+      right: 40px;
+      background-color: transparent;
+      color: orange;
+    }
+  }
+}
