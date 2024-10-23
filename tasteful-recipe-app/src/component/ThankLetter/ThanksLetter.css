@@ -1,0 +1,51 @@
+.thanksLetter_container {
+  margin-top: 5rem;
+  background-color: var(--color-two);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  gap: 1.5rem;
+  h1 {
+    font-size: 4.5rem;
+    text-align: center;
+    color: var(--link-text-color);
+  }
+  h3 {
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+  }
+  .input_field {
+    padding: 0 30px;
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 500px;
+    input {
+      padding: 25px;
+      border: none;
+      outline: none;
+      background-color: white;
+      font-size: 16px;
+      flex: 4;
+    }
+    button {
+      flex: 1;
+      background-color: orange;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 0 20px;
+    }
+    button:hover {
+      background-color: #e69603;
+    }
+  }
+  p {
+    font-size: 14px;
+    color: gray;
+  }
+}

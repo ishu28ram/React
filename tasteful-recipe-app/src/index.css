@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+/* font-family: "Nerko One", cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nerko+One&display=swap");
+/* font-family: "Fira Sans", sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Fira Sans", sans-serif;
+}
+:root {
+  --color-one: #d9e3ab;
+  --color-two: #fc9e7c;
+  --color-three: #7d1616;
+  --bg-main-one: #ede9e9;
+  --link-background: #dedddd;
+  --link-text-color: #000;
+  --text-header: black;
+}
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Dark theme */
+body.dark {
+  --background-color: rgb(44, 44, 44);
+  --text-color: white;
+  --link-background: #1f1f1f;
+  --link-text-color: #fff;
+  --text-header: orange;
+}
+
+ul {
+  list-style-type: none;
+}
+button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.title::before {
+  content: "";
+  border-left: 5px solid var(--color-three);
+  padding-right: 15px;
+}
+img {
+  transition: transform 0.2s ease-in;
+}
+img:hover {
+  transform: scale(1.0258);
+}
+
+@media (max-width: 668px) {
+  .container {
+    width: 85%;
+  }
+}
