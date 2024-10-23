@@ -1,0 +1,78 @@
+.navbar_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+
+  h1 {
+    font-size: 1.8rem;
+    font-style: italic;
+    letter-spacing: -2px;
+    color: var(--text-header);
+  }
+  .navbar_links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    li {
+      .nav {
+        color: var(--link-text-color);
+        font-weight: 500;
+        font-size: 18px;
+        position: relative;
+        padding-bottom: 5px;
+      }
+      .nav::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        bottom: -5px;
+        left: 0;
+        background-color: var(--color-three);
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+      }
+      .nav:hover::before {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+      .nav.active::before {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+    }
+  }
+  .navbar_actions {
+    display: flex;
+    gap: 15px;
+    .nav_icons {
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .search_icon {
+      transition: behavior 0.3s ease;
+    }
+    .hamburger_icon {
+      display: none;
+    }
+  }
+}
+/* Media query to hide links and favorites on smaller screens */
+@media (max-width: 668px) {
+  .navbar_container {
+    .navbar_links {
+      display: none;
+    }
+
+    .navbar_actions {
+      .nav_icons {
+        &.hamburger_icon {
+          display: block;
+        }
+      }
+    }
+  }
+}
